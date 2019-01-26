@@ -1,1 +1,1 @@
-FROM jupyter/education-notebook:latest
+FROM umsimads/education-notebook:latest
