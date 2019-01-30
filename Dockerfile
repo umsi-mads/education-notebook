@@ -4,9 +4,17 @@ FROM jupyter/datascience-notebook:87210526f381
 
 # Add a "USER root" statement followed by RUN statements to install system packages using apt-get,
 # change file permissions, etc.
+USER root
+
+# Install openssh tools so people can used utilities such as ssh-keygen and ssh-add.
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    openssh-client \
+    openssh-server
 
 # If you do switch to root, always be sure to add a "USER $NB_USER" command at the end of the
 # file to ensure the image runs as a unprivileged user by default.
+USER $NB_USER
 
 # The conda-forge channel is already present in the system .condarc file, so there is no need to
 # add a channel invocation in any of the next commands.
