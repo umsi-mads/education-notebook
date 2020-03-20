@@ -23,3 +23,12 @@ used data science libraries.
 Click on the following badge to launch a notebook on the `https://mybinder.org` service.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/umsi-mads/education-notebook/master)
+
+## Usage with docker-compose
+
+To run the container, use `docker-compose up`
+
+To drop into a shell in the running container, use `docker-compose exec notebook bash`
+
+Data will be stored in the nbgrader and notebook folders 
+

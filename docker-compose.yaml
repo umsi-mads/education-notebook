@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+    notebook:
+        build:
+            context: .
+            dockerfile: Dockerfile
+
+        image: 'jupyter/education-notebook:latest'
+        ports:
+            - "8888:8888"
+        volumes:
+            - ./nbgrader/:/srv/nbgrader/
+            - ./notebook/:/notebook/
