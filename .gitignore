@@ -93,3 +93,10 @@ generated/
 # Emacs temp and backup files
 *~
 \#*\#
+
+# Keep nbgrader folder structure but no files
+nbgrader/**
+!nbgrader/ex/
+!nbgrader/**/.gitkeep
+notebook/**
+!notebook/.gitkeep
